@@ -17,7 +17,7 @@ namespace Test
             set { if (value >= 0 && value <= 100) _y = value; }
         }
 
-        public double FindingDistanceBetweenCoordinates(Car _first, Car _second)
+        public static double FindingDistanceBetweenCoordinates(Car _first, Car _second)
         {
             double _firstTerm = Math.Pow(_second.CarCoordinate.X - _first.CarCoordinate.X, 2);
             double _secondTerm = Math.Pow(_second.CarCoordinate.Y - _first.CarCoordinate.Y, 2);

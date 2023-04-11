@@ -65,13 +65,12 @@ namespace Test
         private Dictionary<Player, double> GetNearbyPlayers(int _distance, Car _car)
         {
             var _nearestPlayers = new Dictionary<Player, double>();
-            Coordinate _coordinate = new Coordinate();
 
             for (int i = 0; i < _cars.Count; i++)
             {
                 if (!_cars[i].Equals(_car))
                 {
-                    double _distanceBetweenCoordinates = _coordinate.FindingDistanceBetweenCoordinates(_car, _cars[i]);
+                    double _distanceBetweenCoordinates = Coordinate.FindingDistanceBetweenCoordinates(_car, _cars[i]);
                     if (_distanceBetweenCoordinates <= _distance){
                         _nearestPlayers.Add(_cars[i].Driver, _distanceBetweenCoordinates);
                         for (int j = 0; j < _cars[i].Passengers.Count; j++) {
