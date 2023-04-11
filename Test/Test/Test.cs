@@ -46,7 +46,7 @@ namespace Test
         {
             int _numberOfCars = 0;
             int _numberofPeople = 0;
-            while (_numberOfCars < _cars.Count)
+            while (_numberOfCars < _cars.Count && _numberofPeople < _players.Count)
             {
                 _cars[_numberOfCars].Driver = _players[_numberofPeople];
                 _players[_numberofPeople].PlayerCoordinate.X = _cars[_numberOfCars].CarCoordinate.X;
